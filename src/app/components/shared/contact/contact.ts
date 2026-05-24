@@ -21,7 +21,7 @@ export class Contact {
       return;
     }
 
-    const to      = 'jdcuitiva@ucompensar.edu.co';
+    const to      = 'malocajoven@gmail.com';
     const subject = encodeURIComponent(`Contacto Maloca Joven – ${nombre.value.trim()}`);
     const body    = encodeURIComponent(
       `Nombre: ${nombre.value.trim()}\nEmail: ${email.value.trim()}\n\nMensaje:\n${mensaje.value.trim()}`
