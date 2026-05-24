@@ -1,0 +1,33 @@
+<section class="features">
+  <div class="features__noise" aria-hidden="true"></div>
+
+  <div class="features__container">
+
+    <!-- HEADER -->
+    <div class="features__header" data-reveal>
+      <span class="features__eyebrow">¿Cómo creamos?</span>
+      <h2 class="features__title shimmer-text">NUESTROS PODERES</h2>
+    </div>
+
+    <!-- CARDS -->
+    <div class="features__grid">
+      @for (feature of features; track feature.title; let i = $index) {
+        <article
+          class="features__card"
+          data-reveal
+          [style.--delay]="i * 120 + 'ms'"
+        >
+          <div class="features__card-icon-wrap">
+            <i class="bi {{ feature.icon }} features__card-icon"></i>
+          </div>
+          <div class="features__card-body">
+            <h3 class="features__card-title">{{ feature.title }}</h3>
+            <p class="features__card-desc">{{ feature.description }}</p>
+          </div>
+          <div class="features__card-arrow" aria-hidden="true">›</div>
+        </article>
+      }
+    </div>
+
+  </div>
+</section>

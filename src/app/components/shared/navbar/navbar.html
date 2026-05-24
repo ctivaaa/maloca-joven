@@ -1,0 +1,35 @@
+<nav class="container-main-navbar navbar navbar-expand-lg  " [class.scroll]="scrolled()" [class.show]="asideIsOpen()">
+  <div class="navbar-content">
+    <div class="logo">
+      <a routerLink="">
+        <img ngSrc="logoMaloca.png" alt="Maloca Joven Logo" width="120" height="40" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio">INICIO</a></li>
+      <li><a href="#la-manada">LA MANADA</a></li>
+      <li><a href="#poderes">PODERES</a></li>
+      <li class="portafolio"><a href="#portafolio">PORTAFOLIO</a></li>
+      <li><a href="#contacto">CONTACTO</a></li>
+    </ul>
+    @if (!asideIsOpen()) {
+    <div class="menu-hamburguesa">
+      <button class="btn" (click)="handleClick()"><i class="bi bi-list"></i></button>
+    </div>
+    }@else {
+    <div class="menu-hamburguesa-exit">
+      <button class="btn" (click)="handleClick()"><i class="bi bi-x"></i></button>
+    </div>
+    }
+  </div>
+</nav>
+
+<aside class="burguer" [class.show]="asideIsOpen()">
+  <ul class="nav-links-responsive">
+    <li><a href="#inicio">INICIO</a></li>
+    <li><a href="#la-manada">NOSOTROS</a></li>
+    <li class="portafolio"><a href="#portafolio">PORTAFOLIO</a></li>
+    <li><a href="#poderes">PODERES</a></li>
+    <li><a href="#contacto">CONTACTO</a></li>
+  </ul>
+</aside>

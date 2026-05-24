@@ -1,0 +1,80 @@
+<section class="contact">
+  <div class="contact__noise" aria-hidden="true"></div>
+
+  <div class="contact__container">
+
+    <!-- ICON -->
+    <div class="contact__icon-wrap" aria-hidden="true">
+      <i class="bi bi-envelope-fill contact__icon"></i>
+    </div>
+
+    <!-- HEADING -->
+    <div class="contact__heading">
+      <h2 class="contact__title">
+        <span class="contact__title-line">CONECTA CON</span>
+        <span class="contact__title-line contact__title-line--accent">LA SELVA</span>
+      </h2>
+      <p class="contact__lead">Cuéntanos tu idea. Nosotros ponemos la imagen.</p>
+    </div>
+
+    <!-- FORM -->
+    <form
+      class="contact__form"
+      (submit)="onSubmit(nombreInput, emailInput, mensajeInput); $event.preventDefault()"
+      novalidate
+    >
+      <div class="contact__field">
+        <label class="contact__label" for="nombre">Nombre</label>
+        <input
+          #nombreInput
+          class="contact__input"
+          id="nombre"
+          type="text"
+          placeholder="Tu nombre"
+          autocomplete="name"
+        />
+      </div>
+
+      <div class="contact__field">
+        <label class="contact__label" for="email">Email</label>
+        <input
+          #emailInput
+          class="contact__input"
+          id="email"
+          type="email"
+          placeholder="correo@ejemplo.com"
+          autocomplete="email"
+        />
+      </div>
+
+      <div class="contact__field">
+        <label class="contact__label" for="mensaje">Mensaje</label>
+        <textarea
+          #mensajeInput
+          class="contact__input contact__input--textarea"
+          id="mensaje"
+          placeholder="Detalles de tu proyecto..."
+          rows="5"
+        ></textarea>
+      </div>
+
+      @if (error) {
+        <p class="contact__feedback contact__feedback--error">
+          Por favor completa todos los campos.
+        </p>
+      }
+
+      @if (sent) {
+        <p class="contact__feedback contact__feedback--success">
+          ¡Tu cliente de correo se abrirá con el mensaje listo!
+        </p>
+      }
+
+      <button class="contact__btn" type="submit">
+        <i class="bi bi-send-fill"></i>
+        Enviar
+      </button>
+    </form>
+
+  </div>
+</section>

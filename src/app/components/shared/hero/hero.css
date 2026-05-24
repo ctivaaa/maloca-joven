@@ -1,0 +1,87 @@
+.hero-container {
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../../../../../public/atardecer.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.contenedor {
+  align-items: center;
+  width: 80%;
+  text-align: center;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-principal {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(4rem, 9vw, 10rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.rojos {
+  color: var(--red-danta);
+}
+
+.contenido {
+  font-family: 'monserrat' sans-serif;
+  color: var(--description);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.botones {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ver-portafolio {
+  background-color: var(--red-danta);
+  color: var(--white);
+  border-radius: 3px;
+  padding: 1rem;
+  border: none;
+}
+
+.cambio{
+  background-color: transparent;
+  border: 3px solid var(--turquese-river);
+  color: var(--turquese-river);
+  padding: 1rem;
+     font-family: "Anton" sans-serif;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+.cambio, .ver-portafolio{
+     font-family: "Anton" sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.cambio:hover, .ver-portafolio:hover {
+
+  transform: translateY(-6px);
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.4));
+}
+
+.cambio:hover {
+  background: var(--turquese-river);
+  color: var(--white);
+}

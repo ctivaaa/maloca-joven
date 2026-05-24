@@ -1,0 +1,30 @@
+<section class="social">
+  <div class="social__container">
+
+    <div class="social__header">
+      <span class="social__line" aria-hidden="true"></span>
+      <div class="social__heading">
+        <span class="social__eyebrow">Encuéntranos en</span>
+        <h2 class="social__title">NUESTRAS REDES</h2>
+      </div>
+      <span class="social__line" aria-hidden="true"></span>
+    </div>
+
+    <div class="social__grid">
+      @for (red of redes; track red.name) {
+        <a
+          class="social__card"
+          [href]="red.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="red.name"
+        >
+          <i class="bi {{ red.icon }} social__card-icon"></i>
+          <span class="social__card-name">{{ red.name }}</span>
+          <span class="social__card-handle">{{ red.handle }}</span>
+        </a>
+      }
+    </div>
+
+  </div>
+</section>

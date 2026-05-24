@@ -1,0 +1,33 @@
+<!-- Scroll progress bar -->
+<div class="lp-progress" [style.transform]="'scaleX(' + scrollPct + ')'"></div>
+
+<!-- Custom cursor -->
+<div class="lp-cursor" [style.left.px]="cursorX" [style.top.px]="cursorY" [class.is-hovering]="isHovering"></div>
+<div class="lp-cursor-trail" [style.left.px]="trailX" [style.top.px]="trailY"></div>
+
+<section class="landing-page">
+  <section>
+    <app-navbar></app-navbar>
+  </section>
+  <section id="inicio">
+    <app-hero></app-hero>
+  </section>
+  <section id="la-manada">
+    <app-about></app-about>
+  </section>
+  <section id="poderes">
+    <app-features></app-features>
+  </section>
+  <section id="portafolio">
+    <app-producciones></app-producciones>
+  </section>
+  <section>
+    <app-social></app-social>
+  </section>
+  <section id="contacto">
+    <app-contact></app-contact>
+  </section>
+  <section>
+    <app-footer></app-footer>
+  </section>
+</section>

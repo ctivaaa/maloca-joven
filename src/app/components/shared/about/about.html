@@ -1,0 +1,55 @@
+<section class="about">
+  <div class="about__noise" aria-hidden="true"></div>
+
+  <div class="about__container">
+
+    <!-- ── CONTENT COLUMN ── -->
+    <div class="about__content">
+
+      <h2 class="about__heading" data-reveal data-delay="0">
+        <span class="about__heading-line">SOMOS</span>
+        <span class="about__heading-line about__heading-line--red">MANADA</span>
+        <span class="about__heading-line">CREATIVA</span>
+      </h2>
+
+      <blockquote class="about__quote" data-reveal data-delay="150">
+        "Donde la selva se encuentra con el lente"
+      </blockquote>
+
+      <p class="about__body" data-reveal data-delay="300">
+        En <strong>Maloca Joven</strong>, reinterpretamos las narrativas del Guaviare.
+        Como la <em class="about__highlight">danta</em> que abre caminos en la espesura,
+        nosotros abrimos espacios para la cultura a través de la imagen.
+      </p>
+
+      <div class="about__stats" data-reveal data-delay="450">
+        @for (stat of displayStats; track stat.label) {
+          <div class="about__stat">
+            <span class="about__stat-value">{{ stat.value }}</span>
+            <span class="about__stat-label">{{ stat.label }}</span>
+          </div>
+        }
+      </div>
+
+    </div>
+
+    <!-- ── IMAGE COLUMN ── -->
+    <div class="about__image-wrapper" data-reveal data-delay="100">
+      <img
+        class="about__image"
+        src="camara-cine.png"
+        alt="Fotógrafo de Maloca Joven con cámara de cine"
+        loading="lazy"
+      />
+
+      <div class="about__beam about__beam--green" aria-hidden="true"></div>
+      <div class="about__beam about__beam--white" aria-hidden="true"></div>
+
+      <div class="about__badge">
+        <span class="about__badge-number">4</span>
+        <span class="about__badge-text">AÑOS DE<br>HISTORIA</span>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,52 @@
+<section class="producciones">
+  <div class="producciones__noise" aria-hidden="true"></div>
+
+  <div class="producciones__container">
+
+    <!-- HEADER -->
+    <div class="producciones__header" data-reveal>
+      <h2 class="producciones__title shimmer-text">PRODUCCIONES</h2>
+      <span class="producciones__subtitle">El ojo de la manada</span>
+    </div>
+
+    <!-- FILTERS -->
+    <nav class="producciones__filters" data-reveal [style.--delay]="'80ms'" aria-label="Filtrar producciones">
+      @for (filter of filters; track filter.key) {
+        <button
+          class="producciones__filter-btn"
+          [class.is-active]="activeFilter === filter.key"
+          (click)="setFilter(filter.key)"
+          type="button"
+        >
+          {{ filter.label }}
+        </button>
+      }
+    </nav>
+
+    <!-- GRID -->
+    <div
+      class="producciones__grid"
+      [class.is-transitioning]="isTransitioning"
+    >
+      @for (prod of filteredProducciones; track prod.title + filterVersion; let i = $index) {
+        <article
+          class="producciones__item"
+          [class.producciones__item--large]="prod.size === 'large'"
+          [style.--i]="i"
+        >
+          <img
+            class="producciones__img"
+            [src]="prod.src"
+            [alt]="prod.title"
+            loading="lazy"
+          />
+          <div class="producciones__item-overlay">
+            <span class="producciones__item-cat">{{ prod.category }}</span>
+            <h3 class="producciones__item-title">{{ prod.title }}</h3>
+          </div>
+        </article>
+      }
+    </div>
+
+  </div>
+</section>

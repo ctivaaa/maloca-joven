@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+/* =============================================
+   MALOCA JOVEN — GLOBAL DESIGN TOKENS
+   ============================================= */
+:root {
+  /* Colores */
+  --bg-color:         #0a1a16;
+  --forest-green:     #153830;
+  --turquoise:        #2D7A72;
+  --red-danta:        #e05a5d;
+  --crema:            #F9FDFA;
+  --shadow:           #050F0C;
+
+  /* Alias útiles */
+  --white:            var(--crema);
+  --turquese-river:   var(--turquoise);
+  --danta-transparent: rgba(224, 90, 93, 0.45);
+  --bg-color-rgba:    rgba(10, 26, 22, 0.95);
+
+  /* Tipografía */
+  --font-display: 'Anton', sans-serif;
+  --font-body:    'Montserrat', sans-serif;
+
+  /* Bordes y superficies */
+  --color-border:     rgba(249, 253, 250, 0.07);
+  --color-muted:      rgba(249, 253, 250, 0.45);
+  --color-input-bg:   rgba(249, 253, 250, 0.05);
+
+  /* Glows */
+  --red-glow:         rgba(224, 90, 93, 0.25);
+  --turquoise-glow:   rgba(45, 122, 114, 0.20);
+
+  /* Transiciones */
+  --transition-fast: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scrollbar oculta */
+html::-webkit-scrollbar { display: none; }
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── SHIMMER on section titles ── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--crema)     0%,
+    var(--crema)     40%,
+    rgba(249,253,250,0.55) 50%,
+    var(--crema)     60%,
+    var(--crema)     100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ── FLOATING utility (reusable) ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0);    }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ── FADE IN UP utility ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
